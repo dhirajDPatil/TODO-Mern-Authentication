@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const url = 'http://localhost:8080';
-// const url = 'https://todoapp-personaluse.herokuapp.com';
+// const url = 'http://localhost:8080';
+const url = 'https://todoapp-personaluse.herokuapp.com';
 
 export const loginTodo = (user) => axios.post(`${url}/login`, user, { withCredentials: true } );
 export const singUpTodo = (userinfo) => axios.post(`${url}/signup`, userinfo, { withCredentials: true } );  //{ withCredentials: true } 

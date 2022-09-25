@@ -16,7 +16,7 @@ export default function NavBar({user, logoutHandle}) {
     
   useEffect(()=> {
     navigate('./alltodos', {replace: true})
-  },[user, navigate])  // remove navigate dependency
+  },[user])  // remove navigate dependency -removed
 
   return (
     <Box sx={{ flexGrow: 1 }}>
