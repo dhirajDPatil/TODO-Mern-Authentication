@@ -33,9 +33,9 @@ function App() {
     })
   }
 
-  useEffect(()=> {
+  useEffect(() => {
     getUserName();
-  }, [])
+  })  // change for deployment add empty dependency
 
   return (
     <>

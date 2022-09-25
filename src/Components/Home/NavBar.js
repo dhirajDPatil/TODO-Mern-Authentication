@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { useNavigate } from 'react-router-dom';
-import RDrawer from './Drawer'
 import AccountMenu from './AccountMenu';
 
 export default function NavBar({user, logoutHandle}) {
@@ -17,7 +16,7 @@ export default function NavBar({user, logoutHandle}) {
     
   useEffect(()=> {
     navigate('./alltodos', {replace: true})
-  },[user])
+  },[user, navigate])  // remove navigate dependency
 
   return (
     <Box sx={{ flexGrow: 1 }}>

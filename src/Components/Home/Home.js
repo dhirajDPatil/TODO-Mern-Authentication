@@ -24,7 +24,7 @@ const Home = ({logoutHandle}) => {
     dispatch(getAllT());
     getUser();
     navigate('alltodos')
-  },[])
+  },[dispatch, navigate])  // change after hosting remove both dependency
   
   return (
     <>

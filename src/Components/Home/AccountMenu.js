@@ -5,11 +5,9 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
-import { deleteUser, logoutTodo } from '../../api';
 import { useNavigate } from 'react-router-dom';
 
 export default function AccountMenu({user, logoutHandle}) {
@@ -29,14 +27,6 @@ export default function AccountMenu({user, logoutHandle}) {
     logoutHandle();
   }
 
-  const handleDeleteUser = async () => {
-    const res = prompt("Are you sure?, To Delete User: Enter User Name")
-    if(res === user.uName ){
-      await deleteUser();
-      await logoutTodo();
-      navigate('/login')
-    }
-  }
 
   const editProfileHandler = () => {
     navigate('/home/editprofile')

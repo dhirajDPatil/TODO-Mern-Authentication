@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, CardMedia, Grid, IconButton, TextField, Typography } from '@mui/material'
+import { Button, Card, CardContent, CardMedia, Grid, TextField, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { getUserInfo, updateProfile } from '../../api';
 import FileBase from 'react-file-base64';
